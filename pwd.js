@@ -9,7 +9,7 @@ function copyPassword() {
     textbox.setSelectionRange(0, 99999)
     document.execCommand("copy");
 
-    document.getElementById('copy').innerHTML = "Copied  !";
+    document.getElementById('copy').innerHTML = "Copied!";
 
    setTimeout(function (){document.getElementById('copy').innerHTML = "Copy";}, 800);
 
