@@ -1,0 +1,62 @@
+
+<html lang="en">
+<title> Password Generator  </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/d3fd9d5f94.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" href="logo.jpg">
+<meta name="theme-color" content="#980101" />
+
+
+    
+<body>
+    <h1 id="main"> Password Generator</h1>
+
+    <div class="container">
+    <div class="rangecontainer">
+        <input onchange="displayValue()" id="range" type="range" min="4" max="128" value="6" step="1">
+        Password length: <span class="range-value" id="rangev"> 6 </span>
+    </div>
+
+        <label class="include">Include Lowercase Characters (abcdef...)
+            <input type="checkbox"  id="letter_check1" >
+            <span class="checkmark"></span>
+        </label>
+
+        <label class="include">Include Uppercase Characters (ABCDEF...)
+            <input type="checkbox"  id="letter_check2">
+            <span class="checkmark"></span>
+        </label>
+
+        <label class="include">Include Numbers Characters (012345...)
+            <input type="checkbox" id="number_check">
+            <span class="checkmark"></span>
+        </label>
+
+        <label class="include">Include Special Characters (!@#$%...)
+            <input type="checkbox" id="symbol_check" >
+            <span class="checkmark"></span>
+        </label>
+
+
+    <button id="generate" onclick="generatePassword()"> Find me a password! </button>
+
+    <div id="output">
+        <p> Your password is: </p> <input type="text" id="password" value="" readonly>
+        <button  id="copy-button" onclick="copyPassword()" disabled ><p id="copy"> Copy </p></button>
+    </div>
+
+
+    </div>
+
+    <div id="footer">
+        <hr>
+        <h6>Made with <img style="width: 25px; height: 25px; margin: auto auto -4px -4px" src="js.png"></h6>
+        <h6>Hosted with <i style="color: red" class="fa fa-heart" aria-hidden="true"></i> on <i class="fa fa-github" aria-hidden="true"></i></h6>
+    </div>
+
+    <script src="pwd.js"> </script>
+</body>
+</html>
+
