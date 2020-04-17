@@ -32,7 +32,7 @@ function generatePassword() {
     var charset = '';
     var pwd = '';
 
-    if(letter_check1 == false && letter_check2 == false && number_check == false && symbol_check == false){alert('Please check at least one checkbox!');}
+    if(letter_check1 == false && letter_check2 == false && number_check == false && symbol_check == false){alert('Please check at least one checkbox!'); return;}
 
     if(letter_check1 == true){charset += 'abcdefghijklmnopqrstuvwxyz';}
     if(letter_check2 == true){charset += 'ABDEFGHIJKLMNOPQRSTUVWXYZ';}

@@ -152,7 +152,7 @@ div#output > p{
 }
 div#output button{
     background: #97e39b;
-    width: 120px; margin: 10px auto auto 10px;
+    width: 150px; margin: 10px auto auto 10px;
     border-radius: 10px; border: none;
 }
 div#output button:active{
@@ -189,5 +189,6 @@ input[type=text]{
     input[type=text]{
         font-size: 27px;
     }
+
 
 }
