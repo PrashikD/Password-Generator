@@ -173,8 +173,7 @@ p#copy{
 input[type=text]{
     font-size: 31px; color: #206120;
     display: inline-block;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Lora', serif;
 }
 
 
