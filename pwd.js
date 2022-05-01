@@ -34,10 +34,11 @@ function generatePassword() {
 
     if(letter_check1 == false && letter_check2 == false && number_check == false && symbol_check == false){alert('Please check at least one checkbox!'); return;}
 
-    if(letter_check1 == true){charset += 'abcdefghijklmnopqrstuvwxyz';}
-    if(letter_check2 == true){charset += 'ABDEFGHIJKLMNOPQRSTUVWXYZ';}
-    if(number_check == true){charset += '0123456789';}
-    if(symbol_check == true){charset += '!@#$%^&*()-+';}
+   
+    if(letter_check1 == true){charset += 'zrohtfuivxkajmwnqlbycepdgs';}
+    if(letter_check2 == true){charset += 'FZASJLXYOTMNIBVEQKDPWGHUR';}
+    if(number_check == true){charset += '2859067341';}
+    if(symbol_check == true){charset += '$+*(!@&-^)#%';}
 
     for(let i = 1; i <= len; i++){
         pwd += charset[randInt(0, charset.length - 1)];
