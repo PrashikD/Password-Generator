@@ -36,9 +36,10 @@ function generatePassword() {
 
    
     if(letter_check1 == true){charset += 'zrohtfuivxkajmwnqlbycepdgs';}
-    if(letter_check2 == true){charset += 'FZASJLXYOTMNIBVEQKDPWGHUR';}
     if(number_check == true){charset += '2859067341';}
     if(symbol_check == true){charset += '$+*(!@&-^)#%';}
+    if(letter_check2 == true){charset += 'FZASJLXYOTMNIBVEQKDPWGHUR';}
+    
 
     for(let i = 1; i <= len; i++){
         pwd += charset[randInt(0, charset.length - 1)];
