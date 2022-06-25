@@ -7,19 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="static/style.css">
 <link rel="icon" href="logo.jpg">
 <meta name="theme-color" content="#980101" />
 
 
     
 <body>
-    <h1 id="main"> Password Generator</h1>
+    <h1 class="main-heading"> Password Generator </h1>
 
     <div class="container">
-    <div class="rangecontainer">
+    <div class="range-container">
         <input onchange="displayValue()" id="range" type="range" min="4" max="128" value="6" step="1">
-        Password length: <span class="range-value" id="rangev"> 6 </span>
+        Password length: <span class="range-value" id="rangev"> 6 </span> characters
     </div>
 
         <label class="include">Include Lowercase Characters (abcdef...)
@@ -43,23 +44,30 @@
         </label>
 
 
-    <button id="generate" onclick="generatePassword()"> Find me a password! </button>
+    <button id="generate" onclick="generatePassword()"> Find me a password ! </button>
 
-    <div id="output">
-        <p> Your password is: </p> <input type="text" id="password" value="" readonly>
-        <button  id="copy-button" onclick="copyPassword()" disabled ><p id="copy"> Copy </p></button>
+    <div class="password-output">
+        <p> Your password is : </p> <input type="text" id="password" value="" readonly>
+        <button  id="copy-button" onclick="copyPassword()" > <span class="copy-button-text"> Copy </span> </button> </button>
     </div>
 
 
+    <div class="passwords-container">
+       
     </div>
 
-    <div id="footer">
+
+
+
+    </div>
+
+    <div class="footer">
         <hr>
         <h6>Made with <img style="width: 25px; height: 25px; margin: auto auto -4px -4px" src="js.png"></h6>
         <h6>Hosted with <i style="color: red" class="fa fa-heart" aria-hidden="true"></i> on <i class="fa fa-github" aria-hidden="true"></i></h6>
     </div>
 
-    <script src="pwd.js"> </script>
+    <script src="static/pwd.js"> </script>
 </body>
 </html>
 
