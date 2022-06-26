@@ -159,23 +159,20 @@ div.password-output > p{
 }
 div.password-output button{
     background: #97e39b;
-    width: 150px; margin: 10px auto auto 10px;
     border-radius: 10px; border: none;
+    border-radius: 10px;
+    margin: auto 5px;
+    -webkit-border-radius:10px;
+    box-shadow:0 1px 2px #5e5d5b;    
+    background: linear-gradient(90deg, rgba(127,255,0,1) 0%, rgba(124,252,0,1) 0%, rgba(0,255,0,1) 13%, rgba(50,205,0,1) 28%, rgba(0,250,154,1) 50%, rgba(60,179,113,1) 74%);
+    text-align: center;
+    width: fit-content;
 }
 div.password-output button:active{
     background: #29dc30;
 }
 div.password-output button:disabled{
     background: #555f55;
-}
-button#copy-button{
-    border-radius: 10px;
-    margin: auto 10px auto 0;
-    -webkit-border-radius:10px;
-    box-shadow:0 1px 2px #5e5d5b;    
-    background: linear-gradient(90deg, rgba(127,255,0,1) 0%, rgba(124,252,0,1) 0%, rgba(0,255,0,1) 13%, rgba(50,205,0,1) 28%, rgba(0,250,154,1) 50%, rgba(60,179,113,1) 74%);
-    text-align: center;
-    width: fit-content;
 }
 span.copy-button-text{
     color: white;
@@ -189,7 +186,6 @@ input[type=text]{
     flex-grow: 1;
     margin: auto 10px;
     font-size: 31px; color: #206120;
-    display: inline-block;
     font-family: 'Source Code Pro';
     caret-color: transparent;
 }
@@ -229,16 +225,41 @@ input[type=text]::selection{
         overflow-x: hidden;
     }
     div.container{
-        width: 96%;
+        width: 99%;
+    }
+    div.password-output{
+        display: block;
+        width: 100%;
     }
     .main-heading{
         font-size: 30px;
     }
-    input[type=text]{
+    input[type=text]{    
+        position: relative;   
+        margin: auto;
+        width: 98%;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 27px;
+    }
+    div.password-output > p{
+        margin: 5px 10px;
     }
     div.password-output button{
         width: auto;
+        margin: 10px;
+        position: relative;
+        bottom: 0;
+    }
+    .password-text{        
+        padding: 5px;
+        line-height: 20px;
+        max-width: unset;
+        min-width: unset;
+        width: 97%;
+        margin: 7px auto;
+        flex: auto;
+        word-wrap: break-word;
     }
 
 
