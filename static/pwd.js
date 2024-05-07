@@ -23,6 +23,22 @@ function displayValue() {
 
 }
 
+
+
+function shuffle(string) {
+    var a = string.split(""),
+        n = a.length;
+
+    for(var i = n - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+    }
+    return a.join("");
+};
+
+
 function generatePassword() {
     var len = document.getElementById('range').value;
 
@@ -42,10 +58,25 @@ function generatePassword() {
     if(symbol_check == true){charset += '$+*(!@&-^)#%';}
     if(letter_check2 == true){charset += 'FZASJLXYOTMNIBVEQKDPWGHUR';}
     
-
-    for(let i = 1; i <= len; i++){
-        pwd += charset[randInt(0, charset.length - 1)];
+    charlen = charset.length;
+    while (pwd.length <= len){
+        let index = randInt(randInt(0, Date.now()) - Date.now(), Date.now() + randInt(0, Date.now()));
+        if (index < 0 || index % 2 != 0){
+            continue;
+        }
+        console.log("index generated", index);
+        index = (index / 2) % (charlen - 1);
+        console.log("After mod", index);
+        if (index < (charset / 2))
+        {charset = shuffle(charset);}
+        pwd += charset[index];
     }
+        
+    
+  
+
+    pwd = shuffle(pwd);
+
 
     document.getElementById('password').value = pwd;
 
